@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUIT.EXE</title>
+    <link rel="stylesheet" href="suitt.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <p>★ Arena Adu Nasib ★</p>
+            <h1>SUIT<span>.YOK</span></h1>
+            <p>Menang Kalah Jangan Nanges!</p>
+        </header>
+
+        <div id="menuSuit">
+            <h2>MAU KALAH DIMANA?</h2>
+
+            <div class="JenisSuit">
+                <button class="milihSuit" onclick="pilihSuit('batu')">
+                    <span>🪨</span>
+                    <strong>BATU-GUNTING-KERTAS</strong>
+                    <small>Jangan modal hoki doang yee</small>
+                </button>
+
+                <button class="milihSuit" onclick="pilihSuit('gajah')">
+                    <span>🐘</span>
+                    <strong>GAJAH-ORANG-SEMUT</strong>
+                    <small>Disini semut pun punya harga diri</small>
+                </button>
+
+                <button class="milihSuit" onclick="pilihSuit('jari')">
+                    <span>🤙</span>
+                    <strong>SUIT JARI</strong>
+                    <small>Jangan sampe salah jari</small>
+                </button>
+            </div>
+        </div>
+
+        <div id="areaSuit" style="display: none;">
+            <h2 id="judulSuit"></h2>
+            <p>Ayo Buktikan Hokimu!</p>
+
+            <div id="pilihanPemain" class="pilihan"></div>
+
+            <div class="panelHasil">
+                <p>HASIL PERTANDINGAN</p>
+                <p id="pilihanElo">Pilihan elo: -</p>
+                <p id="PilihanGweh">Pilihan gweh: -</p>
+                <h3 id="hasil">Udah Siap Blom?</h3>
+            </div>
+
+            <div class="panelskor">
+                <div>Elo
+                    <h2 id="skorElo">0</h2>
+                </div>
+                <div>VS</div>
+                <div>Gweh
+                    <h2 id="skorGweh">0</h2>
+                </div>
+            </div>
+            <button onclick="ulangGame()">↻ Balas Dendam</button>
+            <button onclick="kembaliMenu()">← Kabur ke Menu</button>
+        </div>
+    </div>
+
+    <script src="suitt.js"></script>
+</body>
+</html>

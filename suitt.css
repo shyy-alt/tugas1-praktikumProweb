@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px 12px;
+    background: #dcefff;
+    color: #24466b;
+    font-family: monospace;
+}
+
+.container {
+    max-width: 520px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border: 2px solid #24466b;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid #8bbce8;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 10px;
+}
+
+h1 span {
+    color: #5c9edb;
+}
+
+header p,
+#menuSuit p,
+#areaSuit > p {
+    font-size: 12px;
+}
+
+.JenisSuit {
+    display: grid;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px;
+    background: #eef7ff;
+    color: #24466b;
+    border: 1px solid #24466b;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cde7ff;
+}
+
+.milihSuit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 8px;
+}
+
+.milihSuit span {
+    font-size: 35px;
+}
+
+.milihSuit strong {
+    font-size: 12px;
+}
+
+.milihSuit small {
+    font-size: 11px;
+}
+
+#judulSuit {
+    padding: 10px;
+    background: #dcefff;
+    border: 1px solid #24466b;
+    font-size: 16px;
+}
+
+.pilihan {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.pilihan button {
+    min-width: 90px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.panelHasil {
+    padding: 12px;
+    background: #eef7ff;
+    border: 1px solid #8bbce8;
+    overflow-wrap: anywhere;
+}
+
+#hasil {
+    color: #347fc0;
+}
+
+.panelskor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 15px 0;
+    padding: 10px;
+    background: #dcefff;
+    border: 1px solid #24466b;
+    font-size: 11px;
+}
+
+.panelskor h2 {
+    font-size: 28px;
+    margin: 8px;
+}
+
+#hasil.pesanMenang {
+    color: green;
+}
+
+#hasil.pesanKalah {
+    color: red;
+}
+
+#hasil.pesanSeri {
+    color: orange;
+}
+
+@media (max-width: 350px) {
+    .container {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
