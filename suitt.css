@@ -143,13 +143,3 @@ button:disabled {
 #hasil.pesanSeri {
     color: orange;
 }
-
-@media (max-width: 350px) {
-    .container {
-        padding: 12px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-}
