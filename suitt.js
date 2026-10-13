@@ -4,7 +4,7 @@ let skorElo = 0;
 let skorGweh = 0;
 let gameSelesai = false;
 
-// Data permainan
+// Data game
 const dataSuit = {
     batu: {
         nama: "Batu-Gunting-Kertas",
@@ -40,7 +40,7 @@ const dataSuit = {
     }
 };
 
-// Pesan hasil permainan
+// Pesan hasil main
 const pesanMenang = [
     "🏆 RISPEK, BISA JG TERNYATA",
     "🔥 LAH KOK JAGO??",
@@ -59,7 +59,7 @@ const pesanSeri = [
     "🤨 LAH SERI"
 ];
 
-// Memilih mode permainan
+// Memilih Suit
 function pilihSuit(jenis) {
     jenisAktif = jenis;
     skorElo = 0;
@@ -101,7 +101,7 @@ function pilihSuit(jenis) {
     perbaruiSkor();
 }
 
-// Menjalankan permainan
+// memainkan suit
 function mainSuit(pilihanElo) {
     if (gameSelesai) {
         return;
@@ -114,7 +114,7 @@ function mainSuit(pilihanElo) {
 
     let hasil = document.getElementById("hasil");
 
-    // Menentukan hasil permainan
+    // Menentukan hasil suit
     if (pilihanElo === pilihanGweh) {
         hasil.innerText = pesanSeri[
             Math.floor(Math.random() * pesanSeri.length)
@@ -138,7 +138,7 @@ function mainSuit(pilihanElo) {
         hasil.className = "pesanKalah";
     }
 
-    // Menampilkan pilihan pemain dan komputer
+    // Menampilkan pilihan elo dan gweh
     let emojiElo =
         game.emoji[game.pilihan.indexOf(pilihanElo)];
 
@@ -153,7 +153,7 @@ function mainSuit(pilihanElo) {
 
     perbaruiSkor();
 
-    // Permainan berakhir jika skor mencapai 3
+    // game berakhir jika skor mencapai 3
     if (skorElo === 3 || skorGweh === 3) {
         gameSelesai = true;
 
@@ -175,18 +175,18 @@ function mainSuit(pilihanElo) {
     }
 }
 
-// Memperbarui skor
+// perbarui skor
 function perbaruiSkor() {
     document.getElementById("skorElo").innerText = skorElo;
     document.getElementById("skorGweh").innerText = skorGweh;
 }
 
-// Mengulang permainan
+// ulang permainan
 function ulangGame() {
     pilihSuit(jenisAktif);
 }
 
-// Kembali ke menu
+// balik ke menu
 function kembaliMenu() {
     document.getElementById("areaSuit").style.display = "none";
     document.getElementById("menuSuit").style.display = "block";
